@@ -144,6 +144,7 @@
       <li><a href="#projects">Projekte</a></li>
       <li><a href="#skills">Kenntnisse</a></li>
       <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#privacy">Datenschutzerklärung</a></li>
     </ul>
   </header>
 
@@ -230,10 +231,20 @@
     <h2 class="heading">Kontakt</h2>
     <div class="contact-block">
       <form id="contact-form" method="POST" action="https://formspree.io/f/moqobkzg">
-        <input type="email" name="_replyto" placeholder="Deine E-Mail-Adresse" required />
-        <textarea name="message" placeholder="Deine Nachricht" required></textarea>
-        <button type="submit">Absenden</button>
-      </form>
+  <input type="text" name="name" placeholder="Dein Name" required />
+  <input type="email" name="_replyto" placeholder="Deine E-Mail-Adresse" required />
+  <textarea name="message" placeholder="Deine Nachricht" required></textarea>
+
+  <div style="display: none;">
+    <input type="text" name="honeypot" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button type="submit">Absenden</button>
+
+  <small>
+    Mit dem Absenden erklärst du dich mit der Verarbeitung deiner Daten gemäß <a href="#privacy">Datenschutzerklärung</a> einverstanden.
+  </small>
+</form>
     </div>
   </section>
 
@@ -256,7 +267,6 @@
     <h4>1. Verantwortlicher</h4>
     <p>
       Süleyman Gümüs<br />
-      (Adresse freiwillig oder "Kontakt über das Kontaktformular")
     </p>
 
     <h4>2. Zugriffsdaten</h4>
