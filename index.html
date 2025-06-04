@@ -301,6 +301,35 @@
     </p>
   </div>
 </section>
+  
+<script>
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async function (e) {
+    // Honeypot prüfen
+    const honeypot = form.querySelector('input[name="honeypot"]');
+    if (honeypot && honeypot.value !== "") {
+      e.preventDefault();
+      console.warn("Spam-Versuch erkannt und blockiert.");
+      return;
+    }
+
+    // Nachricht absenden
+    e.preventDefault();
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      alert("Danke! Deine Nachricht wurde gesendet.");
+      form.reset();
+    } else {
+      alert("Fehler beim Senden. Bitte versuche es erneut.");
+    }
+  });
+</script>
 
 </body>
 </html>
