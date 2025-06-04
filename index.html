@@ -1,183 +1,249 @@
 <!DOCTYPE html>
-<html class="no-js" lang="de">
+<html lang="de">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mein Portfolio - Süleyman Gümüs</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Süleyman Gümüs</title>
+  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Zusätzliche Optimierungen */
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+    }
+    header {
+      text-align: center;
+      background-color: #2a2a2a;
+      padding: 10px 0;
+    }
+    #menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 0;
+      list-style: none;
+    }
+    #menu li a {
+      color: #8fb1e0;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    #menu li a:hover {
+      background: #444;
+      color: white;
+    }
+    #lead {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('images/lead-bg.jpg') center/cover no-repeat;
+      text-align: center;
+    }
+    #lead h1 {
+      font-size: 3.5rem;
+      color: white;
+    }
+    #lead h2 {
+      font-size: 1.8rem;
+      color: #8fb1e0;
+      margin-bottom: 20px;
+    }
+    .btn-rounded-white {
+      border: 2px solid #8fb1e0;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: none;
+      color: #8fb1e0;
+      transition: all 0.3s ease;
+    }
+    .btn-rounded-white:hover {
+      background: #8fb1e0;
+      color: #1a1a1a;
+    }
+    section {
+      padding: 60px 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    h2.heading {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: white;
+    }
+    .education-block,
+    .project,
+    .contact-block {
+      background-color: #2a2a2a;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    #skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 0;
+    }
+    #skills li {
+      background: #444;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    #contact-form input,
+    #contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      background: #333;
+      border: none;
+      color: white;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    #contact-form button {
+      background: #8fb1e0;
+      color: #1a1a1a;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      background: #111;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      #menu {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!-- mobile menu symbol entfernt -->
 
-    <header>
-        <ul id="menu" class="shadow">
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#experience">Berufserfahrung</a></li>
-            <li><a href="#education">Ausbildung</a></li>
-            <li><a href="#projects">Projekte</a></li>
-            <li><a href="#skills">Kenntnisse</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </header>
+  <header>
+    <ul id="menu">
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#experience">Berufserfahrung</a></li>
+      <li><a href="#education">Ausbildung</a></li>
+      <li><a href="#projects">Projekte</a></li>
+      <li><a href="#skills">Kenntnisse</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </header>
 
-    <div id="lead">
-        <div class="container">
-            <div id="lead-content">
-                <h1>Süleyman Gümüs</h1>
-                <h2>Fachinformatiker für Anwendungsentwicklung (Umschulung)</h2>
-                <a href="Lebenslauf.pdf" class="btn-rounded-white" download>Lebenslauf herunterladen</a>
-            </div>
-        </div>
-        <div id="lead-overlay"></div>
-        <div id="lead-down">
-            <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-        </div>
+  <div id="lead">
+    <h1>Süleyman Gümüs</h1>
+    <h2>Fachinformatiker für Anwendungsentwicklung (Umschulung)</h2>
+    <a href="Lebenslauf.pdf" class="btn-rounded-white" download>Lebenslauf herunterladen</a>
+  </div>
+
+  <section id="about">
+    <h2 class="heading">Über mich</h2>
+    <p>
+      Ich befinde mich seit Januar 2025 in einer Umschulung zum Fachinformatiker für Anwendungsentwicklung. Dabei erwerbe ich fundierte Kenntnisse in Programmierung, Software-Engineering, IT-Sicherheit, Netzwerktechnologien und Datenbanken. Zuvor war ich u. a. als Lean-Six-Sigma-Techniker, REFA-Techniker und Projektleiter tätig und bringe analytisches Denken sowie eine strukturierte Arbeitsweise mit.
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2 class="heading">Berufserfahrung</h2>
+    <div class="education-block">
+      <strong>AFP-Akademie</strong><br />
+      Fachinformatiker (Umschulung) – 01/2025–heute<br />
+      Inhalte: Programmierung, Softwareentwicklung, IT-Sicherheit
     </div>
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">Über mich</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Ich befinde mich seit Januar 2025 in einer Umschulung zum Fachinformatiker für Anwendungsentwicklung. Dabei erwerbe ich fundierte Kenntnisse in Programmierung, Software-Engineering, IT-Sicherheit, Netzwerktechnologien und Datenbanken. Zuvor war ich u. a. als Lean-Six-Sigma-Techniker, REFA-Techniker und Projektleiter tätig und bringe analytisches Denken sowie eine strukturierte Arbeitsweise mit. Diese Kompetenzen möchte ich auf die Softwareentwicklung übertragen und dort weiter ausbauen.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="education-block">
+      <strong>AK Tzanidis GmbH</strong><br />
+      Fuhrparkleiter – 11/2023–03/2024
     </div>
-
-    <div id="experience" class="background-alt">
-        <div class="container">
-            <h2 class="heading">Berufserfahrung</h2>
-            <div id="experience-timeline">
-                <div data-date="01/2025 – heute">
-                    <h3>AFP-Akademie für Personalweiterbildung</h3>
-                    <h4>Fachinformatiker für Anwendungsentwicklung (Umschulung)</h4>
-                    <p>Programmierung, Softwareentwicklung, IT-Sicherheit, Datenbanken, Netzwerktechnik, Qualitätssicherung</p>
-                </div>
-                <div data-date="11/2023 – 03/2024">
-                    <h3>AK Tzanidis GmbH</h3>
-                    <h4>Fuhrparkleiter</h4>
-                    <p>Fahrzeugbeschaffung, Routenkoordination, Schadensmanagement</p>
-                </div>
-                <div data-date="03/2018 – 08/2023">
-                    <h3>Magna Seating Köln GmbH</h3>
-                    <h4>Lean-/Kaizen-Koordinator</h4>
-                    <p>Prozessoptimierung, Zeitstudien, Standardisierung, Lean/Six Sigma, KVP, Ergonomie, Layoutplanung</p>
-                </div>
-            </div>
-        </div>
+    <div class="education-block">
+      <strong>Magna Seating Köln GmbH</strong><br />
+      Lean-/Kaizen-Koordinator – 03/2018–08/2023
     </div>
+  </section>
 
-    <div id="education">
-        <div class="container">
-            <h2 class="heading">Ausbildung</h2>
-            <div class="education-block">
-                <h3>AFP-Akademie für Personalweiterbildung</h3>
-                <span class="education-date">Seit Januar 2025</span>
-                <h4>Umschulung: Fachinformatiker für Anwendungsentwicklung</h4>
-            </div>
-            <div class="education-block">
-                <h3>Adolph-Kolping-Schule, Köln</h3>
-                <span class="education-date">2000 – 2006</span>
-                <h4>Fachoberschulreife mit Qualifikation</h4>
-            </div>
-            <div class="education-block">
-                <h3>Weiterbildungen & Zertifikate</h3>
-                <p>Eine Auswahl meiner beruflichen Weiterbildungen:</p>
-                <ul style="margin-left: 30px;">
-                    <li>REFA-Grundausbildung</li>
-                    <li>Lean Management und Industrie 4.0</li>
-                    <li>Ergonomie Komitee Schulung</li>
-                    <li>Six Sigma Green Belt</li>
-                    <li>LEAN – REFA – Sprint</li>
-                    <li>Arbeitsschutz für Führungskräfte</li>
-                </ul>
-            </div>
-        </div>
+  <section id="education">
+    <h2 class="heading">Ausbildung & Weiterbildungen</h2>
+    <div class="education-block">
+      <strong>AFP-Akademie</strong><br />
+      Umschulung zum Fachinformatiker (seit 01/2025)
     </div>
-
-    <div id="projects" class="background-alt">
-        <div class="container">
-            <h2 class="heading">Projekte</h2>
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" alt="Projektbild" />
-                    </div>
-                    <div class="project-info">
-                        <h3>Projektname</h3>
-                        <p>Kurze Beschreibung des Projekts. Hier kannst du praktische Anwendungen oder private Projekte vorstellen.</p>
-                        <a href="#">Projekt ansehen</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="education-block">
+      <strong>Adolph-Kolping-Schule</strong><br />
+      Fachoberschulreife mit Qualifikation (2006)
     </div>
-
-    <div id="skills">
-        <div class="container">
-            <h2 class="heading">Kenntnisse</h2>
-            <ul>
-                <li>Trae AI (IDE)</li>
-                <li>Git & GitHub</li>
-                <li>Python Basic</li>
-                <li>Softwareentwicklung & Datenbanken</li>
-                <li>IT-Sicherheit</li>
-                <li>Lean Management / Six Sigma</li>
-                <li>Microsoft Office</li>
-                <li>AUTO CAD</li>
-                <li>Deutsch (fließend)</li>
-                <li>Türkisch (fließend)</li>
-                <li>Englisch (befriedigend)</li>
-            </ul>
-        </div>
+    <div class="education-block">
+      <strong>Weiterbildungen</strong>
+      <ul>
+        <li>REFA-Grundausbildung</li>
+        <li>Lean Management & Industrie 4.0</li>
+        <li>Ergonomie Komitee Schulung</li>
+        <li>Six Sigma Green Belt</li>
+        <li>LEAN – REFA – Sprint</li>
+        <li>Arbeitsschutz für Führungskräfte</li>
+      </ul>
     </div>
+  </section>
 
-    <div id="contact">
-        <div class="container">
-            <h2>Kontakt</h2>
-            <div id="contact-form">
-                <form method="POST" action="https://formspree.io/f/moqobkzg">
-                    <input type="hidden" name="_subject" value="Kontaktanfrage von Portfolio-Webseite" />
-                    <input type="email" name="_replyto" placeholder="Deine E-Mail-Adresse" required>
-                    <textarea name="message" placeholder="Deine Nachricht" required></textarea>
-                    <button type="submit">Absenden</button>
-                </form>
-            </div>
-        </div>
+  <section id="projects">
+    <h2 class="heading">Projekte</h2>
+    <div class="project">
+      <h4>Projektname</h4>
+      <p>Kurze Beschreibung. Hier kannst du private oder Ausbildungsprojekte zeigen.</p>
+      <a href="#">Projekt ansehen</a>
     </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>© <span id="current-year">2025</span> Süleyman Gümüs</p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li><a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a></li>
-                        <li><a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <section id="skills">
+    <h2 class="heading">Kenntnisse</h2>
+    <ul>
+      <li>Trae AI (IDE)</li>
+      <li>Git & GitHub</li>
+      <li>Python Basic</li>
+      <li>Softwareentwicklung</li>
+      <li>Datenbanken</li>
+      <li>IT-Sicherheit</li>
+      <li>AutoCAD</li>
+      <li>Microsoft Office</li>
+      <li>Lean / Six Sigma</li>
+      <li>Deutsch / Türkisch (fließend)</li>
+    </ul>
+  </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+  <section id="contact">
+    <h2 class="heading">Kontakt</h2>
+    <div class="contact-block">
+      <form id="contact-form" method="POST" action="https://formspree.io/f/moqobkzg">
+        <input type="email" name="_replyto" placeholder="Deine E-Mail-Adresse" required />
+        <textarea name="message" placeholder="Deine Nachricht" required></textarea>
+        <button type="submit">Absenden</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Süleyman Gümüs – Portfolio</p>
+    <p>
+      <a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+      &nbsp;
+      <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </p>
+  </footer>
+
 </body>
 </html>
