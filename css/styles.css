@@ -30,7 +30,7 @@ header a:hover {
 }
 
 #lead {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/lead-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/mein-neues-bild.png') center/cover no-repeat;
 }
 #lead-content h1 {
     color: #ffffff;
